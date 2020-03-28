@@ -17,7 +17,7 @@
                 <RowDefinition Height="50"/>
                 <RowDefinition Height="50"/>
                 <RowDefinition Height="50"/>
-                <RowDefinition Height="60"/>
+                <RowDefinition Height="45"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="40"/>
                
@@ -89,9 +89,9 @@
                     FontSize="Medium"
                     FontAttributes="Bold"
                     CornerRadius="25"
-                    Margin="0,20,0,0"
+                    Margin="0,0,0,0"
                     WidthRequest="150"
-                    VerticalOptions="Fill"
+                    VerticalOptions="Center"
                     HorizontalOptions="Center"
                     BackgroundColor="White"/>
 
@@ -115,18 +115,16 @@
                     <ColumnDefinition Width="150"/>
                 </Grid.ColumnDefinitions>
 
-                
-
+             
                 <Frame  Grid.Column="0"
                         Grid.Row="0"
                         VerticalOptions="Fill"
                         BackgroundColor ="#1877F2"
-                        Padding="4"
+                        Padding="6"
                         HasShadow="False"
                         CornerRadius="12">
-                <Image 
-                        Source="fbIcon"
-                        />
+
+                <Image VerticalOptions="Center" Source="fbIcon"/>
                 </Frame>
 
                 
@@ -134,7 +132,7 @@
                         Grid.Row="0"
                         VerticalOptions="Fill"
                         BackgroundColor ="White"
-                        Padding="4"
+                        Padding="6"
                         HasShadow="False"
                         CornerRadius="12">
                 <Image
