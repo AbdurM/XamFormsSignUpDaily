@@ -8,42 +8,59 @@
              x:Class="Pages.SignUpPage">
     <ContentPage.Content>
 
-        <StackLayout BackgroundColor="#D73532">
+        <Grid BackgroundColor="{StaticResource BloodyRed}">
 
-            <StackLayout.Resources>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                
+            </Grid.RowDefinitions>
+                
+
+            <Grid.Resources>
                 <Style TargetType="local:BorderlessEntry">
                     <Setter Property="Margin" Value="30,30,0,0"/>
-                    <Setter Property="BackgroundColor" Value="#D73532"/>
+                    <Setter Property="BackgroundColor" Value="{StaticResource BloodyRed}"/>
                     <Setter Property="FontSize" Value="Small"/>
                     <Setter Property="PlaceholderColor" Value="White"/>
                 </Style>
 
-            </StackLayout.Resources>
+            </Grid.Resources>
 
-            <Image HeightRequest="150"
+            <Image
+                   Grid.Row="0"
+                   HeightRequest="150"
                    HorizontalOptions="Center"
                    VerticalOptions="Center"
                    BackgroundColor="White"
-                   Source="pinterest-icon"
-                   Margin="0,100,0,30"/>
+                   Source="pinteresticon"
+                   Margin="0,70,0,30"/>
 
             <!--Sign up area-->
             <Label
+                Grid.Row="1"
                 Text="Sign up"
                 TextColor="White"
                 FontSize="Title"
                 FontAttributes="Bold"
                 Margin="30"/>
 
-            <local:BorderlessEntry Placeholder="Name"/>
+            <local:BorderlessEntry Grid.Row="2" Placeholder="Name"/>
             
             
-            <local:BorderlessEntry Placeholder="Email"/>
+            <local:BorderlessEntry Grid.Row="3" Placeholder="Email"/>
             
-            <local:BorderlessEntry Placeholder="Password"
+            <local:BorderlessEntry Grid.Row="4" Placeholder="Password"
                    IsPassword="True" />
 
-            <Button Text="Sign up"
+            <Button
+                    Grid.Row="5"
+                    Text="Sign up"
                     TextColor="#D73532"
                     FontSize="Large"
                     CornerRadius="25"
@@ -53,7 +70,8 @@
                     HorizontalOptions="Center"
                     BackgroundColor="White"/>
 
-            <Label Text="-Or-"
+            <Label Grid.Row ="6"
+                   Text="-Or-"
                    Margin="0,30,0,30"
                    HorizontalOptions="Center"
                    VerticalOptions="Center"
@@ -61,28 +79,45 @@
                    FontSize="10"/>
             
             <!--Fb and Google Buttons-->
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <Grid Grid.Row="7"
+                  HorizontalOptions="Center"
+                  HeightRequest="40"
+                  Margin="30,0,30,0">
 
-                <StackLayout.Resources>
-                    <Style TargetType="Button">
-                        <Setter Property="Padding" Value="7"/>
-                        <Setter Property="CornerRadius" Value="12"/>
-                        <Setter Property="HeightRequest" Value= "40"/>
-                        <Setter Property="WidthRequest" Value="150"/>
-                        <Setter Property= "HorizontalOptions" Value="Start"/>
-                    </Style>
-                </StackLayout.Resources>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="150"/>
+                </Grid.ColumnDefinitions>
 
-                <Button ImageSource="FbIcon"
-                        Margin="0,0,10,10"
-                        BackgroundColor="#0182C4"/>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                </Grid.RowDefinitions>
 
-                <Button ImageSource="GoogleIcon"
-                        Margin="0,0,0,10"
-                        BackgroundColor="White"/>
+                <Frame  Grid.Column="0"
+                        Grid.Row="0"
+                        BackgroundColor ="#1877F2"
+                        Padding="4"
+                        HasShadow="False"
+                        CornerRadius="12">
+                <Image 
+                        Source="fbIcon"
+                        />
+                </Frame>
 
+                
+                <Frame  Grid.Column="1"
+                        Grid.Row="0"
+                        BackgroundColor ="White"
+                        Padding="4"
+                        HasShadow="False"
+                        CornerRadius="12">
+                <Image
+                        Source="GoogleIcon"
+                        
+                        />
+                </Frame>
 
-            </StackLayout>
-        </StackLayout>
+            </Grid>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

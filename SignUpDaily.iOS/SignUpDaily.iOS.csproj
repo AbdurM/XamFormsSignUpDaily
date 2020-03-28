@@ -134,9 +134,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\pinterest-icon.png" />
-    <BundleResource Include="Resources\FbIcon.png" />
+    <BundleResource Include="Resources\pinteresticon.png" />
     <BundleResource Include="Resources\GoogleIcon.png" />
+    <BundleResource Include="Resources\fbIcon.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="CustomRenderers\" />
