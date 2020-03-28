@@ -11,20 +11,21 @@
         <Grid BackgroundColor="{StaticResource BloodyRed}">
 
             <Grid.RowDefinitions>
+                <RowDefinition Height="4*"/>
+                <RowDefinition Height="1.2*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="0.75*"/>
                 <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                
+                <RowDefinition Height="0.75*"/>
+                <RowDefinition Height="70"/>
             </Grid.RowDefinitions>
                 
 
             <Grid.Resources>
                 <Style TargetType="local:BorderlessEntry">
-                    <Setter Property="Margin" Value="30,30,0,0"/>
+                    <Setter Property="Margin" Value="30,0,0,0"/>
                     <Setter Property="BackgroundColor" Value="{StaticResource BloodyRed}"/>
                     <Setter Property="FontSize" Value="Small"/>
                     <Setter Property="PlaceholderColor" Value="White"/>
@@ -32,69 +33,71 @@
 
             </Grid.Resources>
 
+            <!--Top Image-->
             <Image
                    Grid.Row="0"
-                   HeightRequest="150"
                    HorizontalOptions="Center"
-                   VerticalOptions="Center"
+                   VerticalOptions="Fill"
                    BackgroundColor="White"
                    Source="pinteresticon"
-                   Margin="0,70,0,30"/>
+                   Margin="0,50,0,30"/>
 
             <!--Sign up area-->
+
             <Label
                 Grid.Row="1"
+                VerticalOptions="Fill"
                 Text="Sign up"
                 TextColor="White"
                 FontSize="Title"
                 FontAttributes="Bold"
-                Margin="30"/>
+                Margin="30,0,0,0"/>
 
             <local:BorderlessEntry Grid.Row="2" Placeholder="Name"/>
-            
             
             <local:BorderlessEntry Grid.Row="3" Placeholder="Email"/>
             
             <local:BorderlessEntry Grid.Row="4" Placeholder="Password"
                    IsPassword="True" />
 
-            <Button
-                    Grid.Row="5"
+            <!--Signup button-->
+            <Button Grid.Row="5"
                     Text="Sign up"
-                    TextColor="#D73532"
-                    FontSize="Large"
+                    TextColor="{StaticResource BloodyRed}"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
                     CornerRadius="25"
-                    Margin="0,25,0,0"
+                    Margin="0,0,0,0"
                     WidthRequest="150"
-                    HeightRequest="50"
+                    VerticalOptions="Fill"
                     HorizontalOptions="Center"
                     BackgroundColor="White"/>
 
             <Label Grid.Row ="6"
                    Text="-Or-"
+                   BackgroundColor="Transparent"
                    Margin="0,30,0,30"
                    HorizontalOptions="Center"
-                   VerticalOptions="Center"
+                   VerticalOptions="Fill"
                    TextColor="White"
-                   FontSize="10"/>
+                   FontSize="13"/>
             
             <!--Fb and Google Buttons-->
             <Grid Grid.Row="7"
+                  VerticalOptions="Fill"
                   HorizontalOptions="Center"
-                  HeightRequest="40"
-                  Margin="30,0,30,0">
+                  Margin="0,0,0,0">
 
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="150"/>
                     <ColumnDefinition Width="150"/>
                 </Grid.ColumnDefinitions>
 
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="40"/>
-                </Grid.RowDefinitions>
+                
 
                 <Frame  Grid.Column="0"
                         Grid.Row="0"
+                        VerticalOptions="Fill"
                         BackgroundColor ="#1877F2"
                         Padding="4"
                         HasShadow="False"
@@ -107,6 +110,7 @@
                 
                 <Frame  Grid.Column="1"
                         Grid.Row="0"
+                        VerticalOptions="Fill"
                         BackgroundColor ="White"
                         Padding="4"
                         HasShadow="False"
